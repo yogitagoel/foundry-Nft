@@ -1,9 +1,9 @@
 // SPDX-License-Identifier:MIT
-pragma solidity ^0.8.18;
+pragma solidity ^0.8.28;
 
-import {Script} from "forge-std/Script.sol";
+import {Script} from "../lib/forge-std/src/Script.sol";
 import {MoodNft} from "../src/MoodNft.sol";
-import {Base64} from "@openzeppelin/contracts/utils/Base64.sol";
+import {Base64} from "../lib/openzeppelin-contracts/contracts/utils/Base64.sol";
 
 contract DeployMoodNft is Script {
     function run() external returns (MoodNft) {
