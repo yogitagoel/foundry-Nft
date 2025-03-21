@@ -2,9 +2,9 @@
 
 pragma solidity ^0.8.18;
 
-import {Test} from "forge-std/Test.sol";
-import {BasicNFT} from "../src/BasicNFT.sol";
-import {DeployBasicNft} from "../script/DeployBasicNFT.s.sol";
+import {Test} from "../../lib/forge-std/src/Test.sol";
+import {BasicNFT} from "../../src/basicNFT.sol";
+import {DeployBasicNft} from "../../script/DeployBasicNft.s.sol";
 
 contract BasicNFTTest is Test {
     DeployBasicNft public deployer;
@@ -30,7 +30,7 @@ contract BasicNFTTest is Test {
 
     function testCanMintAndHaveABalance() public {
         vm.prank(USER);
-        basicNft.mintNft(PUG);
+        basicNft.mintNFT(PUG);
 
         assert(basicNft.balanceOf(USER) == 1);
         assert(
